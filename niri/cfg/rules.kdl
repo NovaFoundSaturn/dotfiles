@@ -9,7 +9,7 @@
         exclude title=r#"^[Ss]team$"#
         open-floating true
     }
-
+	
     window-rule {
        match app-id="steam" title=r#"^notificationtoasts_\d+_desktop$"#
        default-floating-position x=10 y=10 relative-to="bottom-right"
@@ -21,9 +21,18 @@
         place-within-backdrop true
     }
 
+    // Ghostty
     window-rule {
 	match app-id="ghostty"
 	background-effect {
 		blur true
 	}
     }
+
+    // Discord
+    window-rule {
+	match app-id="discord"
+	open-on-output "DP-1"
+	open-maximized true
+    }
+
