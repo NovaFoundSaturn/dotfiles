@@ -20,3 +20,10 @@
         match namespace="^noctalia-wallpaper*"
         place-within-backdrop true
     }
+
+    window-rule {
+	match app-id="ghostty"
+	background-effect {
+		blur true
+	}
+    }
