@@ -36,3 +36,11 @@
 	open-maximized true
     }
 
+   // Hide borders for small floating art windows
+   window-rule {
+	match app-id="steam_app_1284210" // GW2 Launcher
+	match app-id="steam_app_306130"  // ESO Launcher
+	focus-ring {
+           off
+    	}
+   }
