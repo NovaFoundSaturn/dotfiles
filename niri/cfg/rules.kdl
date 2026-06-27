@@ -3,7 +3,7 @@
         clip-to-geometry true
     }
 
-     // if you use steam you will probably like these
+    // Steam Window Settings
     window-rule {
         match app-id="steam"
         exclude title=r#"^[Ss]team$"#
@@ -16,6 +16,11 @@
        open-focused false
     }
 
+    window-rule {
+	match app-id="steam"
+	open-maximized true
+    }
+    // Wallpaper Rule
     layer-rule {
         match namespace="^noctalia-wallpaper*"
         place-within-backdrop true
@@ -36,11 +41,16 @@
 	open-maximized true
     }
 
-   // Hide borders for small floating art windows
-   window-rule {
+    // Hide borders for small floating art windows
+    window-rule {
 	match app-id="steam_app_1284210" // GW2 Launcher
 	match app-id="steam_app_306130"  // ESO Launcher
 	focus-ring {
            off
     	}
-   }
+    }
+    
+    window-rule {
+	match app-id="zen"
+	open-maximized true
+    }
