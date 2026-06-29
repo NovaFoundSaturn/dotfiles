@@ -49,6 +49,12 @@
            off
     	}
     }
+
+    // Open Runescape in fullscreen
+    window-rule {
+	match app-id="steam_app_1374490"
+	open-fullscreen true
+    }
     
     window-rule {
 	match app-id="zen"
