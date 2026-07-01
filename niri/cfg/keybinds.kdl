@@ -109,6 +109,7 @@ binds {
 
     // ─── Layout Controls ───
     Mod+SHIFT+M                         { expand-column-to-available-width; }
+    Mod+CTRL+M				{ fullscreen-window; }
     Mod+C                               { center-column; }
     Mod+CTRL+C                          { center-visible-columns; }
     Mod+Minus                           { set-column-width "-10%"; }
