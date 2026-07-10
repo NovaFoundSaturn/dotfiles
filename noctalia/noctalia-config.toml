@@ -5,6 +5,7 @@ capsule_border = "primary"
 capsule_opacity = 0.69999998435378075
 end = [ "media", "tray", "volume", "notifications" ]
 margin_ends = 10 
+margin_edge = 10
 radius = 8
 start = [ "workspaces" ]
 
