@@ -164,16 +164,16 @@ fill_mode = "fit"
 transition_on_startup = true
 
     [wallpaper.default]
-    path = "/home/$USER/Pictures/Wallpapers/hollowknight-green.png"
+    path = "~/Pictures/Wallpapers/hollowknight-green.png"
 
     [wallpaper.last]
-    path = "/home/$USER/Pictures/Wallpapers/hollowknight-logo.png"
+    path = "~/Pictures/Wallpapers/hollowknight-logo.png"
 
     [wallpaper.monitors.DP-1]
-    path = "/home/$USER/Pictures/Wallpapers/hollowknight-logo.png"
+    path = "~/Pictures/Wallpapers/hollowknight-logo.png"
 
     [wallpaper.monitors.DP-2]
-    path = "/home/$USER/Pictures/Wallpapers/hollowknight-green.png"
+    path = "~/Pictures/Wallpapers/hollowknight-green.png"
 
 [weather]
 unit = "imperial"
