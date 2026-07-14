@@ -49,8 +49,14 @@
            off
     	}
     }
-    
+   // Zen Browser 
     window-rule {
 	match app-id="zen"
 	open-maximized true
     }
+   // Jetbrains IDEs
+   window-rule {
+	match title="Welcome to RustRover"
+	match title="Welcome to CLion"
+	open-floating true
+   }
