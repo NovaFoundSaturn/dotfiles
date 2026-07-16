@@ -60,3 +60,9 @@
 	match title="Welcome to CLion"
 	open-floating true
    }
+
+   // Gnome Calculator
+   window-rule {
+    match app-id="org.gnome.Calculator"
+    open-floating true
+   }
