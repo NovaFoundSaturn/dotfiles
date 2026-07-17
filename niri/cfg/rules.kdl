@@ -54,12 +54,6 @@
 	match app-id="zen"
 	open-maximized true
     }
-   // Jetbrains IDEs
-   window-rule {
-	match title="Welcome to RustRover"
-	match title="Welcome to CLion"
-	open-floating true
-   }
 
    // Gnome Calculator
    window-rule {
