@@ -3,11 +3,38 @@ background_opacity = 0.59999998658895493
 capsule = true
 capsule_border = "primary"
 capsule_opacity = 0.69999998435378075
-end = [ "media", "tray", "volume", "notifications" ]
-margin_ends = 10 
+end = [ "group:g2", "group:g3" ]
 margin_edge = 10
+margin_ends = 10
 radius = 8
-start = [ "workspaces" ]
+start = [ "group:g1" ]
+
+    [[bar.default.capsule_group]]
+    border = "primary"
+    enabled = true
+    fill = "surface_variant"
+    id = "g1"
+    members = [ "workspaces" ]
+    opacity = 0.69999998807907104
+    padding = 8.0
+
+    [[bar.default.capsule_group]]
+    border = "primary"
+    enabled = true
+    fill = "surface_variant"
+    id = "g2"
+    members = [ "cat", "media" ]
+    opacity = 0.69999998807907104
+    padding = 6.0
+
+    [[bar.default.capsule_group]]
+    border = "primary"
+    enabled = true
+    fill = "surface_variant"
+    id = "g3"
+    members = [ "tray", "notifications", "volume", "bluetooth", "network" ]
+    opacity = 0.69999998807907104
+    padding = 6.0
 
 [control_center]
 sidebar_section = "none"
@@ -92,16 +119,19 @@ widget_order = [ "lockscreen-login-box@DP-1", "lockscreen-login-box@DP-2" ]
 [osd.kinds]
 media = false
 
-[[plugins.source]]
-kind = "git"
-location = "https://github.com/noctalia-dev/official-plugins"
-name = "official"
+[plugins]
+enabled = [ "noctalia/bongocat" ]
 
-[[plugins.source]]
-enabled = false
-kind = "git"
-location = "https://github.com/noctalia-dev/community-plugins"
-name = "community"
+    [[plugins.source]]
+    kind = "git"
+    location = "https://github.com/noctalia-dev/official-plugins"
+    name = "official"
+
+    [[plugins.source]]
+    enabled = false
+    kind = "git"
+    location = "https://github.com/noctalia-dev/community-plugins"
+    name = "community"
 
 [shell]
 niri_overview_type_to_launch_enabled = true
@@ -151,32 +181,46 @@ settings_show_advanced = true
     variant = "destructive"
 
 [theme]
+builtin = "Noctalia"
+community_palette = "Oxocarbon"
 mode = "dark"
 source = "wallpaper"
+wallpaper_scheme = "m3-rainbow"
 
     [theme.templates]
-    builtin_ids = [ "gtk3", "gtk4", "ghostty", "kcolorscheme", "niri", "qt" ]
+    builtin_ids = [ "btop", "gtk3", "gtk4", "ghostty", "helix", "kcolorscheme", "niri", "qt" ]
     enable_community_templates = false
 
 [wallpaper]
+directory = "/home/parkjb/Pictures/Wallpapers"
 fill_color = "shadow"
 fill_mode = "fit"
 transition_on_startup = true
 
     [wallpaper.default]
-    path = "~/Pictures/Wallpapers/hollowknight-green.png"
+    path = "/home/parkjb/Pictures/Wallpapers/wallhaven-xeze5z_2560x1440.png"
 
     [wallpaper.last]
-    path = "~/Pictures/Wallpapers/hollowknight-logo.png"
+    path = "/home/parkjb/Pictures/Wallpapers/hollowknight-logo.png"
 
     [wallpaper.monitors.DP-1]
-    path = "~/Pictures/Wallpapers/hollowknight-logo.png"
+    path = "/home/parkjb/Pictures/Wallpapers/hollowknight-logo.png"
 
     [wallpaper.monitors.DP-2]
-    path = "~/Pictures/Wallpapers/hollowknight-green.png"
+    path = "/home/parkjb/Pictures/Wallpapers/wallhaven-xeze5z_2560x1440.png"
 
 [weather]
 unit = "imperial"
+
+[widget.bluetooth]
+hide_when_no_connected_device = true
+
+[widget.cat]
+audio_spectrum = true
+color = "tertiary"
+enabled = true
+tappy_mode = true
+type = "noctalia/bongocat:cat"
 
 [widget.input_volume]
 show_label = false
@@ -186,6 +230,9 @@ hide_when_no_media = true
 
 [widget.network]
 show_label = false
+
+[widget.tray]
+drawer = true
 
 [widget.volume]
 show_label = false
