@@ -3,7 +3,8 @@ background_opacity = 0.59999998658895493
 capsule = true
 capsule_border = "primary"
 capsule_opacity = 0.69999998435378075
-end = [ "group:g2", "group:g3" ]
+center = [ "group:g2" ]
+end = [ "group:g3", "volume" ]
 margin_edge = 10
 margin_ends = 10
 radius = 8
@@ -22,8 +23,8 @@ start = [ "group:g1" ]
     border = "primary"
     enabled = true
     fill = "surface_variant"
-    id = "g2"
-    members = [ "cat", "media" ]
+    id = "g3"
+    members = [ "tray", "notifications" ]
     opacity = 0.69999998807907104
     padding = 6.0
 
@@ -31,8 +32,8 @@ start = [ "group:g1" ]
     border = "primary"
     enabled = true
     fill = "surface_variant"
-    id = "g3"
-    members = [ "tray", "notifications", "volume", "bluetooth", "network" ]
+    id = "g2"
+    members = [ "clock" ]
     opacity = 0.69999998807907104
     padding = 6.0
 
@@ -120,7 +121,7 @@ widget_order = [ "lockscreen-login-box@DP-1", "lockscreen-login-box@DP-2" ]
 media = false
 
 [plugins]
-enabled = [ "noctalia/bongocat" ]
+enabled = []
 
     [[plugins.source]]
     kind = "git"
@@ -222,6 +223,10 @@ enabled = true
 tappy_mode = true
 type = "noctalia/bongocat:cat"
 
+[widget.clock]
+capsule = true
+capsule_radius = "auto"
+
 [widget.input_volume]
 show_label = false
 
@@ -233,6 +238,7 @@ show_label = false
 
 [widget.tray]
 drawer = true
+pinned = [ "Arch-Update" ]
 
 [widget.volume]
 show_label = false
