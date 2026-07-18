@@ -47,6 +47,10 @@
         open-on-output "DP-1"
         open-maximized true
     }
+    window-rule {
+        match app-id="obsidian"
+        open-maximized true
+    }
 
     // Hide borders for small floating art windows
     window-rule {
